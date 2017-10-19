@@ -1,6 +1,6 @@
 import numpy as np
 
-#近邻算法代码
+#近邻算法代码，简单实现
 class NearestNeighbor:
     def __init__(self):
         pass
