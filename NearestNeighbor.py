@@ -13,7 +13,7 @@ class NearestNeighbor:
         for i in range(num_test):
             distance = np.sum(np.abs(self.strX-X[i,:]), axis = 1)
             minIndex = np.argmin(distance)
-            preY = self.stry[minIndex]
+            preY[i] = self.stry[minIndex]
         return preY
     def score(self, prey, y):
         num_test = y.shape[0]
@@ -35,5 +35,5 @@ test_y = np.array(test[b'labels'])
 nn = NearestNeighbor()
 nn.train(train_X,y)
 pre_Y = nn.predict(test_X)
-nn.score(pre_Y, test_y)#0.1
+nn.score(pre_Y, test_y)#0.2235
         
